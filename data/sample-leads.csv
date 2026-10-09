@@ -1,0 +1,9 @@
+company,industry,location,employees,revenue_m,website,email
+Northstar Analytics,Software,"New York, US",145,12,northstaranalytics.example,hello@northstaranalytics.example
+BrightPath Logistics,Logistics,"Chicago, US",280,32,brightpathlogistics.example,contact@brightpathlogistics.example
+Cloudline Systems,Software,"Austin, US",85,8,cloudlinesystems.example,team@cloudlinesystems.example
+Evergreen Manufacturing,Manufacturing,"Dallas, US",420,55,evergreenmanufacturing.example,info@evergreenmanufacturing.example
+Summit Advisory Group,Consulting,"Boston, US",62,6,summitadvisory.example,hello@summitadvisory.example
+HarborTech Solutions,Software,"Seattle, US",210,24,harbortech.example,sales@harbortech.example
+Redwood Supply Co,Manufacturing,"Denver, US",175,18,redwoodsupply.example,info@redwoodsupply.example
+Pioneer Health Group,Healthcare,"Atlanta, US",330,40,pioneerhealth.example,contact@pioneerhealth.example

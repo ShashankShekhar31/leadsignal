@@ -32,6 +32,15 @@ Scores are clamped to 0–100. Priority is **High** at 75–100, **Medium** at 5
 
 These weights and thresholds are explicit prototype assumptions, not a validated sales model. A score describes fit against the rules above; it is not evidence of purchase intent. Website and email presence are not verification.
 
+## Included sample dataset
+
+The repository includes `data/sample-leads.csv`, an eight-record synthetic dataset matching the companies shown when the dashboard first loads. Use it to try the CSV import workflow without sourcing real contact data.
+
+- All company names, domains, and email addresses are illustrative placeholders.
+- The domains use the reserved `.example` namespace; the addresses are not intended to contact real people.
+- To load the file, run the app, click **Import CSV**, and select `data/sample-leads.csv`.
+- Importing replaces the current in-memory list with the selected CSV after validation. A rejected import leaves the existing list unchanged.
+
 ## CSV format
 
 The importer accepts a header row and at least one data row. Headers are normalized to lowercase and spaces/hyphens become underscores. Supported aliases include:
@@ -50,13 +59,11 @@ Example:
 
 ```csv
 company,industry,location,employees,revenue_m,website,email
-Meridian AI,Software,New York,120,18,meridian.example,sales@meridian.example
+Meridian AI,Software,"New York, US",120,18,meridian.example,sales@meridian.example
 Corner Bakery,Retail,Denver,8,0,,
 ```
 
 Numbers for revenue should be in millions. The prototype treats missing numeric values as zero. Invalid negative or non-numeric numeric values are rejected. The parser supports quoted fields, commas inside quoted values, and escaped double quotes. It rejects unclosed quoted fields and duplicate/empty headers.
-
-The sample domains and addresses above use the reserved `.example` namespace and are placeholders, not live prospects.
 
 ## Tech stack
 
@@ -73,6 +80,8 @@ The sample domains and addresses above use the reserved `.example` namespace and
 Requirements: Node.js and npm.
 
 ```bash
+git clone https://github.com/ShashankShekhar31/leadsignal.git
+cd leadsignal
 npm install
 npm run dev
 ```
